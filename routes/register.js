@@ -13,8 +13,6 @@ router.use(bodyParser.urlencoded({extended:true}));
 
 router.post('/users', (req,res) => {
 
-      res.render("Hello there");
-
       var data = {
 
           _id:req.body.id,
