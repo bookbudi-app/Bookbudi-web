@@ -13,7 +13,7 @@ router.use(bodyParser.urlencoded({extended:true}));
 
 router.post('/users', (req,res) => {
 
-     // res.send("Hello there");
+      res.render("Hello there");
 
       var data = {
 
