@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const dotEnv = require('dotenv').config();
 
-var app = express();
+//var app = express();
 
 var dburl = process.env.URL;
 
@@ -39,7 +39,7 @@ router.post('/users', (req,res) => {
                           if(user){
 
                           	res.send("User exists");
-                          	console.log("user exists");
+                          	console.log("User exists");
                           }
                           else{
 
