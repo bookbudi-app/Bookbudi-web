@@ -14,7 +14,7 @@ router.post('/addbooks', (req,res) => {
 
 	  var data = {
 
-	  	User_id: req.body.Id,
+	  	User_id: req.body.userId,
 	  	Name: req.body.name,
 	  	Book_name: req.body.bookName,
 	    Book_image: req.body.image,
