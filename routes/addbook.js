@@ -17,7 +17,7 @@ router.post('/addbooks', (req,res) => {
 	  	_id: req.body.Id,
 	  	Name: req.body.name,
 	  	Book_name: req.body.bookName,
-	    Book_image: req.body.image;
+	    Book_image: req.body.image,
 	  	Subject: req.body.subject,
 	  	Category: req.body.category,
 	  	Grade: req.body.grade,
