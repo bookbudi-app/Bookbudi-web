@@ -8,6 +8,7 @@ const app = express();
 app.set('view engine','ejs');
 app.use(require('./routes/register'));
 app.use(require('./routes/banners'));
+app.use(require('./routes/addbook'));
 
 const port = process.env.PORT || 3000; 
 
