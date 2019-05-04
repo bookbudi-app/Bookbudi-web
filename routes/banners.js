@@ -17,7 +17,7 @@ router.get('/banners', (req,res) => {
 
                	var collect = client.db('Bookbudi_db').collection('banners');
 
-               	collect.find({},{projection:{_id:0}}).toArray((err,result) => {
+               	collect.find({}).toArray((err,result) => {
 
                       
                       if(err){
