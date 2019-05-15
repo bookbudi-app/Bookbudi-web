@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
-const dotEnv = require('dotenv').config();
+const env = require('dotenv').config();
 
 //var app = express();
 
