@@ -17,19 +17,19 @@ router.post('/postedBook', (req,res) => {
 
           	var collect = client.db("Bookbudi_db").collection('Books');
 
-            collect.find({User_id:req.body.userId}).project({Book_name:1,Book_image:1}).toArray((err,result) =>{
+            collect.find({User_id:req.body.userId}).project({Book_name:1,Book_image:1,_id:1}).toArray((err,result) =>{
 
 
                       if(err){
 
                       	console.log("Error".red, +err);
+                        
                         client.close();
-
                       }
 
                       else{
 
-                      	output = result.map(r => ({'Book_name':r.Book_name,'Book_image':r.Book_image}));
+                      	output = result.map(r => ({'Book_name':r.Book_name,'Book_image':r.Book_image,'Id':r._id}));
 
                       	res.send(output);
 
