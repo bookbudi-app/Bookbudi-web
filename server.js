@@ -12,6 +12,7 @@ app.use(require('./routes/addbook'));
 app.use(require('./routes/loginBanners'));
 app.use(require('./routes/postedBook'));
 app.use(require('./routes/deleteRow'));
+app.use(require('./routes/loadCity'));
 
 const port = process.env.PORT || 3000; 
 
