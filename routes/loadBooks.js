@@ -77,7 +77,7 @@ router.post('/loadBooks', (req,res) => {
                             else{
 
                             	output = result.map(r => ({'Id':r._id,'Book_name':r.Book_name,'Subject':r.Subject,
-                                        'User_id':r.User_id,'Book_image':r.Book_image,'City':r.City}));
+                                        'User_id':r.User_id,'Book_image':r.Book_image,'Class':r.Grade}));
 
                                 res.json(output);
                             
