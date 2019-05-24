@@ -32,7 +32,7 @@ router.post('/bookDetail',(req,res) => {
 
                               if(err){
 
-                              	colsole.log("Error:" +err);
+                              	console.log("Error:" +err);
                               	client.close();
                               }
                               else{
