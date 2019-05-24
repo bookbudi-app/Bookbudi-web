@@ -14,6 +14,7 @@ app.use(require('./routes/postedBook'));
 app.use(require('./routes/deleteRow'));
 app.use(require('./routes/loadCity'));
 app.use(require('./routes/loadBooks'));
+app.use(require('./routes/bookDetail'));
 
 const port = process.env.PORT || 3000; 
 

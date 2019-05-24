@@ -14,13 +14,13 @@ router.post('/deleteRow', (req,res) => {
 
         var myquery = { _id:new ObjectID(req.body.postId)};
 
-            if(err){
+          if(err){
 
             	console.log("Error:", +err);
             }
             else{
 
-            	var collect = client.db('Bookbudi_db').collection('Books');
+              	var collect = client.db('Bookbudi_db').collection('Books');
 
                 collect.deleteOne(myquery, function(err,obj){
 
@@ -38,7 +38,7 @@ router.post('/deleteRow', (req,res) => {
                        	 client.close();
                        }
 
-                });
+                }); 
             }
 
      });
