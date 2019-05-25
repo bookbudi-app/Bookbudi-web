@@ -38,7 +38,8 @@ router.post('/bookDetail',(req,res) => {
                               else{
 
                               	var output = result.map(r => ({'Book_name':r.Book_name,'Subject':r.Subject,
-                                            'Book_image':r.Book_image,'Class':r.Grade,'Cost':r.Price}));
+                                            'Book_image':r.Book_image,'Class':r.Grade,'Cost':r.Price,
+                                             'Name':r.Name}));
 
                               	res.json(output);
 
