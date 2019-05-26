@@ -39,7 +39,7 @@ router.post('/bookDetail',(req,res) => {
 
                               	var output = result.map(r => ({'Book_name':r.Book_name,'Subject':r.Subject,
                                             'Book_image':r.Book_image,'Class':r.Grade,'Cost':r.Price,
-                                             'Name':r.Name}));
+                                             'Name':r.Name,'User_id':r.User_id}));
 
                               	res.json(output);
 
