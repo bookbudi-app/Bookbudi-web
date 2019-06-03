@@ -6,15 +6,20 @@ const bodyParser = require('body-parser');
 const app = express();
 
 app.set('view engine','ejs');
+
 app.use(require('./routes/register'));
 app.use(require('./routes/banners'));
-app.use(require('./routes/addbook'));
+app.use(require('./routes/addbooks'));
 app.use(require('./routes/loginBanners'));
 app.use(require('./routes/postedBook'));
 app.use(require('./routes/deleteRow'));
 app.use(require('./routes/loadCity'));
 app.use(require('./routes/loadBooks'));
 app.use(require('./routes/bookDetail'));
+app.use(require('./routes/test'));
+app.use(require('./routes/saveUserProfile'));
+app.use(require('./routes/checkPhoneNo'));
+app.use(require('./routes/retrofittest'))    
 
 const port = process.env.PORT || 3000; 
 
