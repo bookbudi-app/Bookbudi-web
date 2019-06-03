@@ -40,8 +40,7 @@ router.post('/retrofitUsers',(req,res) => {
                     })
                  }
 
-
-      });
+         });
 });
 
 module.exports = router;
