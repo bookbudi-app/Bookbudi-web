@@ -34,7 +34,7 @@ router.post('/retrofitUsers',(req,res) => {
                     		console.log("Error" +err);
                     	}else{
 
-                    		res.send("Data inserted");
+                    		res.send({res:"Data inserted"});
                     		client.close();
                     	}
                     })
