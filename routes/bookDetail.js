@@ -11,7 +11,7 @@ router.post('/bookDetail',(req,res) => {
 
          // var data = {book_id:req.body.bId};   
 
-           var ObjectID = require('mongodb').ObjectID;
+            var ObjectID = require('mongodb').ObjectID;
 
             var myquery = { _id:new ObjectID(req.body.bId)};
 
@@ -24,8 +24,8 @@ router.post('/bookDetail',(req,res) => {
                       }
                       else{
 
-                      //  console.log("Id:", myquery);
-                      	var collect = client.db('Bookbudi_db').collection('Books');
+                       // console.log("Id:", myquery);
+                     	var collect = client.db('Bookbudi_db').collection('Books');
 
                       	collect.find({_id:myquery._id}).toArray((err,result) => {
 
