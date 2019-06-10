@@ -11,7 +11,7 @@ router.post('/addtoWishlist',(req,res) => {
 
      var data = { 
 
-     	  Book_id:req.body.BookId,
+     	  _id:req.body.BookId,
           User_id:req.body.UserId,
           Book_image:req.body.Book_Image,
           Book_name:req.body.Book_name,
