@@ -14,11 +14,11 @@ router.post('/addtoWishlist',(req,res) => {
         var data = { 
             
           _id: ObjectId(req.body.BookId),
-          User_id:req.body.UserId,
-          Book_image:req.body.Book_Image,
-          Book_name:req.body.Book_name,
-          Book_subject:req.body.Book_subject,
-          Book_class:req.body.Book_class
+          UserId:req.body.UserId,
+          BookImage:req.body.Book_Image,
+          BookName:req.body.Book_name,
+          BookSubject:req.body.Book_subject,
+          BookClass:req.body.Book_class
        };
 
      MongoClient.connect(dburl,{useNewUrlParser:true},(err,client) => {
