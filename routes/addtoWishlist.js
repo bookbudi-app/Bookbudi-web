@@ -9,7 +9,7 @@ var dburl = process.env.url;
 
 router.post('/addtoWishlist',(req,res) => {
 
-     var data { 
+     var data = { 
 
      	  Book_id:req.body.BookId,
           User_id:req.body.UserId,
