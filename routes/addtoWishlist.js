@@ -10,8 +10,10 @@ var dburl = process.env.URL;
 router.post('/addtoWishlist',(req,res) => {
 
      var data = { 
-
-     	  _id:req.body.BookId,
+            
+          var ObjectId = require('mongodb').ObjectID
+            
+     	  _id:ObjectId(req.body.BookId),
           User_id:req.body.UserId,
           Book_image:req.body.Book_Image,
           Book_name:req.body.Book_name,
