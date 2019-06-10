@@ -5,7 +5,7 @@ const router = express.Router();
 const env = require('dotenv');
 const MongoClient = require('mongodb').MongoClient;
 
-var dburl = process.env.url;
+var dburl = process.env.URL;
 
 router.post('/addtoWishlist',(req,res) => {
 
