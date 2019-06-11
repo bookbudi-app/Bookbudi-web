@@ -22,6 +22,7 @@ app.use(require('./routes/checkPhoneNo'));
 app.use(require('./routes/addPhoneNo'));
 app.use(require('./routes/checkWishlist'));
 app.use(require('./routes/addtoWishlist'));
+app.use(require('./routes/removeFromWishlist'));
 app.use(require('./routes/retrofit/retrofittest'));
 app.use(require('./routes/retrofit/getUsers'));    
 
