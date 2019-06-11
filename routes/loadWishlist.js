@@ -31,8 +31,8 @@ router.post('/loadWishlist',(req,res) => {
                            }else{
 
                            	output = result.map(r => ({'UserId':r.UserId,'BookId':r._id,
-                                                'BookImage':r.BookImage,'BookName':r.BookName,
-                                                 'BookSubject':r.BookSubject}));
+                                                'BookImage':r.BookImage,'BookName':r.BookName}));
+                           	
                            	res.json(output);
                            	client.close();
 
