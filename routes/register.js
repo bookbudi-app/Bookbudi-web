@@ -25,7 +25,7 @@ router.post('/users', (req,res) => {
   from: 'test@example.com',
   subject: 'Sending with Twilio SendGrid is Fun',
   text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>'
 };
 
       MongoClient.connect(dburl,{ useNewUrlParser: true }, (err,client) => {
