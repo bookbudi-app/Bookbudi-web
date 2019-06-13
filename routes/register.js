@@ -3,8 +3,10 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const env = require('dotenv').config();
+const sgMail = require('@sendgrid/mail');
 
 var dburl = process.env.URL;
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended:true}));
@@ -17,6 +19,14 @@ router.post('/users', (req,res) => {
           Name:req.body.username,
           Email:req.body.email 
       };
+
+      const msg = {
+  to: 'me.digvijay18@gmail.com',
+  from: 'test@example.com',
+  subject: 'Sending with Twilio SendGrid is Fun',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+};
 
       MongoClient.connect(dburl,{ useNewUrlParser: true }, (err,client) => {
 
@@ -54,6 +64,7 @@ router.post('/users', (req,res) => {
 
                                  	console.log("User created".green);
                                  	res.send("User created");
+                                  sgMail.send(msg);
                                  }
 
 
