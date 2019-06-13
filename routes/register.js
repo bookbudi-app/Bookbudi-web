@@ -22,7 +22,7 @@ router.post('/users', (req,res) => {
 
       const msg = {
   to: 'me.digvijay18@gmail.com',
-  from: 'test@example.com',
+  from: 'travotics1@gmail.com',
   subject: 'Sending with Twilio SendGrid is Fun',
   text: 'and easy to do anywhere, even with Node.js',
   html: '<strong>and easy to do anywhere, even with Node.js</strong>'
