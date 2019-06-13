@@ -64,7 +64,18 @@ router.post('/users', (req,res) => {
 
                                  	console.log("User created".green);
                                  	res.send("User created");
-                                  sgMail.send(msg);
+                                  sgMail.send(msg, (err) => {
+
+                                         if(err){
+
+                                          console.log("Error", err);
+                                         }else{
+
+                                          console.log("Email sent");
+                                         }
+
+                                  });
+                                 
                                  }
 
 
