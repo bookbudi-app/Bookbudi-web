@@ -32,15 +32,20 @@ router.post('/users', (req,res) => {
       const msg = {
   to: 'me.digvijay18@gmail.com',
   from: 'travotics1@gmail.com',
-  html:`${html}`
- /* templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
-  dynamic_template_data: {
-    Sender_Name: 'Bookbudi',
-    Sender_Address: '971/32 alwar gate',
-    Sender_City: 'Ajmer',
-    Sender_State:'Rajasthan',
-    Sender_Zip:'305001'
-  }  */
+  templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
+  personalizations:[
+           {
+             dynamic_template_data: {
+                    Sender_Name: 'Bookbudi',
+                    Sender_Address: '971/32 alwar gate',
+                    Sender_City: 'Ajmer',
+                    Sender_State:'Rajasthan',
+                    Sender_Zip:'305001'
+                  }  
+           }
+  ]
+
+ 
  // subject: 'Sending with Twilio SendGrid is Fun',
 //  text: 'and easy to do anywhere, even with Node.js',
  // html: '<strong>and easy to do anywhere, even with Node.js</strong>'
