@@ -20,20 +20,30 @@ router.post('/users', (req,res) => {
           Email:req.body.email 
       };
 
+      const html = `<html>
+                   <body>
+                   <p text-align="center">
+                   Hello user how r u
+                   </p>
+                   <img src="https://firebasestorage.googleapis.com/v0/b/bookbudiapp.appspot.com/o/Email%20campaigns%2Fundraw_learning_2q1h.png?alt=media&token=eeebb941-eb62-43d5-a7db-8e6b7cdb7931" alt ="image"/>
+                   </body> 
+                    </html>`
+
       const msg = {
   to: 'me.digvijay18@gmail.com',
   from: 'travotics1@gmail.com',
-  templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
+  html:`${html}`
+ /* templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
   dynamic_template_data: {
     Sender_Name: 'Bookbudi',
     Sender_Address: '971/32 alwar gate',
     Sender_City: 'Ajmer',
     Sender_State:'Rajasthan',
     Sender_Zip:'305001'
-  },
-  subject: 'Sending with Twilio SendGrid is Fun',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>'
+  }  */
+ // subject: 'Sending with Twilio SendGrid is Fun',
+//  text: 'and easy to do anywhere, even with Node.js',
+ // html: '<strong>and easy to do anywhere, even with Node.js</strong>'
 };
 
       MongoClient.connect(dburl,{ useNewUrlParser: true }, (err,client) => {
