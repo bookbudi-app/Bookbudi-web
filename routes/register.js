@@ -24,7 +24,7 @@ router.post('/users', (req,res) => {
   to: 'me.digvijay18@gmail.com',
   from: 'travotics1@gmail.com',
   templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
-  dynamic_template_data: personalisations[
+  dynamic_template_data: 'personalizations'[
                     {
                     Sender_Name: 'Bookbudi',
                     Sender_Address: '971/32 alwar gate',
