@@ -34,7 +34,7 @@ router.post('/users', (req,res) => {
   from: 'travotics1@gmail.com',
   templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
   personalizations:[
-           {
+           
              dynamic_template_data: {
                     Sender_Name: 'Bookbudi',
                     Sender_Address: '971/32 alwar gate',
@@ -42,7 +42,7 @@ router.post('/users', (req,res) => {
                     Sender_State:'Rajasthan',
                     Sender_Zip:'305001'
                   }  
-           }
+           
   ]
 
  
