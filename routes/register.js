@@ -28,11 +28,11 @@ router.post('/users', (req,res) => {
   substitutions:
   {
 
-    company_name:['Bookbudi'],
-    address:['971/32 alwar gate'],
-    city:['Ajmer'],
-    state:['Rajasthan'],
-    zip:['305001']
+    "-company_name-":['Bookbudi'],
+    "-address-":['971/32 alwar gate'],
+    "-city-":['Ajmer'],
+    "-state-":['Rajasthan'],
+    "zip-":['305001']
    }
   
  /* dynamic_template_data:{
