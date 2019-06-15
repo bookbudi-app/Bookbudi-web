@@ -26,16 +26,13 @@ router.post('/users', (req,res) => {
   to: req.body.email,
   from: 'travotics1@gmail.com',
   templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
-  personalizations: [
-      {
-        dynamic_template_data: {
+  dynamicTemplateData: {
           
           company: "Bookbudi",
           city: "Ajmer"
           
         }
-      }
-    ]
+      
  /* substitutions:
   {
 
