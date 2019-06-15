@@ -7,7 +7,7 @@ const sgMail = require('@sendgrid/mail');
 
 var dburl = process.env.URL;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-sgMail.setSubstitutionWrappers("[ ]");
+sgMail.setSubstitutionWrappers("[", "]");
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended:true}));
