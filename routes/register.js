@@ -7,7 +7,7 @@ const sgMail = require('@sendgrid/mail');
 
 var dburl = process.env.URL;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-sgMail.setSubstitutionWrappers("[", "]");
+sgMail.setSubstitutionWrappers("{{", "}}");
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended:true}));
@@ -28,13 +28,12 @@ router.post('/users', (req,res) => {
   templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
   dynamic_Template_Data: {
           
-          Sender_Name: "Bookbudi",
-          Sender_City: "Ajmer",
-          Sender_State:"Rajasthan",
-          Sender_Address:"971/32 alwar gate",
-          Sender_Zip:"305008"
-          
-        }
+          user:req.body.username,
+          company: "Bookbudi",
+          city: "Ajmer",
+          state:"Rajasthan",
+          zip:"305008"
+      }
       
 };
 
