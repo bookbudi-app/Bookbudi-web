@@ -7,7 +7,7 @@ const sgMail = require('@sendgrid/mail');
 
 var dburl = process.env.URL;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-sgMail.setSubstitutionWrappers("[", "]");
+sgMail.setSubstitutionWrappers("[ ]");
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended:true}));
@@ -36,24 +36,6 @@ router.post('/users', (req,res) => {
           
         }
       
- /* substitutions:
-  {
-
-    company:'Example'
-   }  */
-  
- /* dynamic_template_data:{
-                    
-                    Sender_Name: 'Bookbudi',
-                    Sender_Address: '971/32 alwar gate',
-                    Sender_City: 'Ajmer',
-                    Sender_State:'Rajasthan',
-                    Sender_Zip:'305001'
-                   }  */
-               
-// subject: 'Sending with Twilio SendGrid is Fun',
-//  text: 'and easy to do anywhere, even with Node.js',
- // html: '<strong>and easy to do anywhere, even with Node.js</strong>'
 };
 
       MongoClient.connect(dburl,{ useNewUrlParser: true }, (err,client) => {
