@@ -25,16 +25,16 @@ router.post('/users', (req,res) => {
   from: 'travotics1@gmail.com',
   templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
   substitutionWrapppers:['{{  }}'],
-  substitutions:[
+  substitutions:
   {
 
-    company_name:'Bookbudi',
-    address:'971/32 alwar gate',
-    city:'Ajmer',
-    state:'Rajasthan',
-    zip:'305001'
+    [company_name:'Bookbudi'],
+    [address:'971/32 alwar gate'],
+    [city:'Ajmer'],
+    [state:'Rajasthan'],
+    [zip:'305001']
    }
-  ]
+  
  /* dynamic_template_data:{
                     
                     Sender_Name: 'Bookbudi',
