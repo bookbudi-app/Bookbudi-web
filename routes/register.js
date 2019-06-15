@@ -7,6 +7,7 @@ const sgMail = require('@sendgrid/mail');
 
 var dburl = process.env.URL;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setSubstitutionWrappers("{{", "}}");
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended:true}));
@@ -21,15 +22,25 @@ router.post('/users', (req,res) => {
       };
 
       const msg = {
+  
   to: req.body.email,
   from: 'travotics1@gmail.com',
   templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
-  substitutionWrapppers:['{{' , '}}'],
-  substitutions:
+  personalizations: [
+      {
+        dynamic_template_data: {
+          
+          company: "Bookbudi",
+          city: "Ajmer"
+          
+        }
+      }
+    ]
+ /* substitutions:
   {
 
     company:'Example'
-   }
+   }  */
   
  /* dynamic_template_data:{
                     
