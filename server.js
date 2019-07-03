@@ -23,6 +23,7 @@ app.use(require('./routes/checkWishlist'));
 app.use(require('./routes/addtoWishlist'));
 app.use(require('./routes/removeFromWishlist'));
 app.use(require('./routes/loadWishlist'));
+app.use(require('./routes/getPhone'));
 app.use(require('./routes/retrofit/retrofittest'));
 app.use(require('./routes/retrofit/getUsers'));    
 
