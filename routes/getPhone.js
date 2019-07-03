@@ -11,7 +11,7 @@ router.use(bodyParser.urlencoded({extended:true}));
 
 router.post('/getPhone',(req,res) => {
 
-	 let myquery = req.body.uId;
+	 let myquery = req.body.userid;
 
      MongoClient.connect(dburl,{useNewUrlParser:true},(err,client) => {
                         
