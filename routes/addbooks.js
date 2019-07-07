@@ -16,6 +16,7 @@ router.post('/addbooks', (req,res) => {
 
 	  	User_id: req.body.userId,
 	  	Email:req.body.email,
+	  	Profile_image:req.body.profileImage,
 	  	Name: req.body.name,
 	  	Book_name: req.body.bookName,
 	    Book_image: req.body.image,
