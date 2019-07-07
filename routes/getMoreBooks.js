@@ -29,7 +29,7 @@ router.post('/getMoreBooks',(req,res) => {
 
                              	let output = result.map(r => ({'bookImg':r.Book_image,'bookName':r.Book_name,
                                               'bookSubject':r.Subject,'bookClass':r.Grade,'bookCity':r.City,
-                                               'userName':r.Name}));
+                                               'userName':r.Name,'profileImage':r.Profile_image}));
 
                              	res.json(output);
 
