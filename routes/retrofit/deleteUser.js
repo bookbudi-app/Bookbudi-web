@@ -15,7 +15,7 @@ router.post('/deleteRemoteUser',(req,res) => {
        MongoClient.connect(dburl,{useNewUrlParser:true},(err,client) => {
 
                 var ObjectID = require('mongodb').ObjectID;
-                var myquery = { _id:new ObjectID(req.body.id)};
+                var myquery = { _id:new ObjectID(req.body._id)};
                 
                 if(err){
                 	
