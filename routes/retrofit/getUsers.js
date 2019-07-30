@@ -26,7 +26,7 @@ router.get('/getUsers',(req,res) => {
                           }
                           else{
 
-                          	output = result.map(r => ({'id':r._id,'name':r.name,'age':r.age}));
+                          	output = result.map(r => ({'_id':r._id,'name':r.name,'age':r.age}));
                           	res.json(output);
 
                           	client.close();
