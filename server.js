@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser'); 
-const favicon = require('serve-favicon');
 const path = require('path');
 const env = require('dotenv').config();
 
