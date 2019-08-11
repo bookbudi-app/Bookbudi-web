@@ -25,7 +25,7 @@ router.post('/users', (req,res) => {
   
   to: req.body.email,
   from: 'hello@bookbudi.com',
-  fromname:'Bookbudi'
+  fromname:'Bookbudi',
   templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
   dynamic_Template_Data: {
           
