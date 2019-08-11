@@ -24,7 +24,8 @@ router.post('/users', (req,res) => {
       const msg = {
   
   to: req.body.email,
-  from: 'travotics1@gmail.com',
+  from: 'hello@bookbudi.com',
+  fromname:'Bookbudi'
   templateId:'d-8e322d7da4f44ca1afc76aefb3721972',
   dynamic_Template_Data: {
           
@@ -32,7 +33,7 @@ router.post('/users', (req,res) => {
           company: "Bookbudi",
           city: "Ajmer",
           state:"Rajasthan",
-          zip:"305008"
+          zip:"305001"
       }
       
 };
