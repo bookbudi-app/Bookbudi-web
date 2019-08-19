@@ -5,7 +5,7 @@ const env = require('dotenv').config();
 
 var dburl = process.env.URL;
 
-router.get('loadFaq',(req,res) => {
+router.get('/loadFaq',(req,res) => {
 
       MongoClient.connect(dburl,{useNewUrlParser:true},(err,client) => {
 

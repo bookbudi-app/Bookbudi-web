@@ -33,6 +33,7 @@ app.use(require('./routes/removeFromWishlist'));
 app.use(require('./routes/loadWishlist'));
 app.use(require('./routes/getPhone'));
 app.use(require('./routes/getMoreBooks'));
+app.use(require('./routes/loadFaq'));
 //app.use(require('./routes/checkVersion'));
 app.use(require('./routes/retrofit/retrofittest'));
 app.use(require('./routes/retrofit/getUsers'));   
