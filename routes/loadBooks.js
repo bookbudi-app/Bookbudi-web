@@ -70,13 +70,9 @@ router.post('/loadBooks', (req,res) => {
                             
                             if(err){
 
-<<<<<<< HEAD
-                            	onsole.log("Error", +err);
-=======
                             	console.log("Error", +err);
->>>>>>> 39e717597cc854f79ab6273d5bc3ab9a3cc87829
 
-                            	client.close();
+                                client.close();
                             }
                             else{
 
